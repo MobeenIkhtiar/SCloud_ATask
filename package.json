@@ -9,10 +9,10 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "cross-env NODE_ENV=development nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main"
+    "start": "node api.js && nest start",
+    "start:dev": "node api.js && cross-env NODE_ENV=development nest start --watch",
+    "start:debug": "node api.js && nest start --debug --watch",
+    "start:prod": "node api.js && node dist/main"
   },
   "dependencies": {
     "@casl/ability": "^5.4.3",
@@ -74,5 +74,4 @@
     "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   }
-
 }
